@@ -33,7 +33,10 @@ public class TestSelenium {
         // (Optional) Locate a button and click it
         WebElement submitButton = driver.findElement(By.xpath("//button[text()='Login']"));
         submitButton.click();
-        
+
+        File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+FileUtils.copyFile(screenshot, new File("/Users/kshitijsalunkhe/eclipse-workspace/Website1testing/src/test.png"));
+
         
         // Print the page title
        // System.out.println("Page title is: " + driver.getTitle());
